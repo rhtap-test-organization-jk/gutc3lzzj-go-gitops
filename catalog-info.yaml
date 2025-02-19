@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: gutc3lzzj-go-gitops
+  description: This is GitOps manifest for gutc3lzzj-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=gutc3lzzj-go
+    backstage.io/kubernetes-id: gutc3lzzj-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: gutc3lzzj-go   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:gutc3lzzj-go
